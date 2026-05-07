@@ -1,0 +1,35 @@
+name: New Episode Detected
+
+on:
+  push:
+    paths:
+      - 'episodes/**'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get new episode filename
+        id: episode
+        run: |
+          NEW_FILE=$(git diff --name-only HEAD~1 HEAD -- episodes/ | head -1)
+          echo "filename=$NEW_FILE" >> $GITHUB_OUTPUT
+          echo "Detected new file: $NEW_FILE"
+
+      - name: Send email via Resend
+        run: |
+          curl -s -X POST https://api.resend.com/emails \
+            -H "Authorization: Bearer ${{ secrets.RESEND_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "from": "AI Podcast <onboarding@resend.dev>",
+              "to": ["ruth_tupe@mckinsey.com"],
+              "subject": "New Podcast Episode Ready — Run /podcast-email",
+              "html": "<p>A new episode has been uploaded to the <strong>episodes/</strong> folder:</p><p><code>${{ steps.episode.outputs.filename }}</code></p><p>Open Claude Code in your <strong>ai-podcast</strong> repo directory and run:</p><pre>/podcast-email</pre><p>Claude will handle transcription, content generation, and image sourcing — and will pause for your review before publishing.</p>"
+            }'
