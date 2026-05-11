@@ -83,7 +83,10 @@ Ask: "Does this look good? Any changes to the summary, headlines, or image direc
 
 ## Step 5 — Source and download images
 
-For each headline plus the hero image, download a relevant photo from Unsplash:
+The header logo image is evergreen and already hosted on Mailchimp — do NOT source or replace it. It is hardcoded in the template as:
+`https://mcusercontent.com/af80ba3d9225959b5306dfe78/images/3810d858-c5c7-3510-bbba-b699a8a46280.jpg`
+
+For the hero image and each headline, download a relevant photo from Unsplash:
 
 ```bash
 curl -s --insecure -o "assets/ep[N]_[slug].jpg" \
