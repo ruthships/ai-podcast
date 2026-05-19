@@ -11,7 +11,19 @@ You can optionally pass headlines directly:
 
 ---
 
-## Step 1 — Find and rename the episode file
+## Step 1 — Pull latest from GitHub
+
+Run `git pull` to fetch any newly uploaded episode files:
+
+```bash
+git pull
+```
+
+If the pull fails or there are conflicts, stop and let the user know before proceeding.
+
+---
+
+## Step 2 — Find and rename the episode file
 
 Look in the `episodes/` folder for the most recently added audio file.
 
@@ -32,7 +44,7 @@ Wait for confirmation before proceeding.
 
 ---
 
-## Step 2 — Transcribe the audio
+## Step 3 — Transcribe the audio
 
 Run Whisper on the renamed file:
 ```bash
@@ -45,7 +57,7 @@ If the user provided headlines directly, skip transcription and use those instea
 
 ---
 
-## Step 3 — Generate content
+## Step 4 — Generate content
 
 From the transcript (or provided headlines), generate:
 
@@ -58,7 +70,7 @@ From the transcript (or provided headlines), generate:
 
 ---
 
-## Step 4 — Human review checkpoint
+## Step 5 — Human review checkpoint
 
 Present the following to the user for approval:
 
@@ -81,7 +93,7 @@ Ask: "Does this look good? Any changes to the summary, headlines, or image direc
 
 ---
 
-## Step 5 — Source and download images
+## Step 6 — Source and download images
 
 The header logo image is evergreen and already hosted on Mailchimp — do NOT source or replace it. It is hardcoded in the template as:
 `https://mcusercontent.com/af80ba3d9225959b5306dfe78/images/3810d858-c5c7-3510-bbba-b699a8a46280.jpg`
@@ -101,7 +113,7 @@ Show the user which images were downloaded and what they depict.
 
 ---
 
-## Step 6 — Build the newsletter HTML
+## Step 7 — Build the newsletter HTML
 
 Read the template at `newsletters/podcast-email-template.html`.
 
@@ -123,7 +135,7 @@ Save the completed newsletter as:
 
 ---
 
-## Step 7 — Push to GitHub
+## Step 8 — Push to GitHub
 
 Stage and commit all new files:
 ```bash
@@ -134,7 +146,7 @@ git push
 
 ---
 
-## Step 8 — Final confirmation
+## Step 9 — Final confirmation
 
 Tell the user:
 - Newsletter file saved to `newsletters/`
