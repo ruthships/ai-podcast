@@ -1,2 +1,12 @@
 .env
 .DS_Store
+
+# Weekly working folders (audio outputs, notebook artifacts, scratch JSON)
+2026-*/
+
+# Local script and story drafts (not part of the published repo)
+podcast_script_*.md
+podcast_stories_*.md
+
+# Local newsletter PDFs (sources for podcast prep)
+emails/
