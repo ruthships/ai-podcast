@@ -128,7 +128,7 @@ For headlines, alternate between two block layouts:
 - **Even** (2nd, 4th, 6th): text LEFT, image RIGHT (reverse class)
 
 Use GitHub raw URLs for all images:
-`https://raw.githubusercontent.com/ruthtupemck/ai-podcast/main/assets/[filename]`
+`https://raw.githubusercontent.com/ruthships/ai-podcast/main/assets/[filename]`
 
 Save the completed newsletter as:
 `newsletters/ai-podcast-episode-[N]-[YYYY-MM-DD].html`
@@ -153,4 +153,4 @@ Tell the user:
 - Images pushed to `assets/`
 - Episode file renamed and pushed to `episodes/`
 - Remind them to update `#EPISODE_URL` in the newsletter with the Google Drive link
-- Raw newsletter URL on GitHub: `https://raw.githubusercontent.com/ruthtupemck/ai-podcast/main/newsletters/[filename]`
+- Raw newsletter URL on GitHub: `https://raw.githubusercontent.com/ruthships/ai-podcast/main/newsletters/[filename]`
