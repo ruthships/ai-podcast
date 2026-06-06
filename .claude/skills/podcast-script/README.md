@@ -25,10 +25,9 @@ Output: a polished two-host MP3 (via ElevenLabs) + a full NotebookLM-ready story
 
 ### 1. Install the skill
 
-Copy this folder to your Claude skills directory (or symlink your `01-ai-podcast-script` repo):
-```bash
-cp -r ~/Code/01-ai-podcast-script ~/.claude/skills/podcast-script
-```
+This skill is **vendored** inside the newsletter repo at
+`02-ai-podcast-newsletter/.claude/skills/podcast-script/`, so cloning that repo
+installs it automatically — no copy or symlink step needed.
 
 ### 2. Configure your Outlook account
 

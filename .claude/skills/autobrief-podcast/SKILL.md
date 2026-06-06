@@ -63,7 +63,7 @@ A stage's output existing means we **skip** it. The user can override with `--fo
 Before resolving inputs or touching any stage, make sure the environment is ready. This is the one-time setup that previously had to be done by hand mid-run (creating the venv, `pip install`-ing packages). The bootstrap script is **idempotent** — fast and safe to run on every invocation.
 
 ```bash
-bash ~/Code/00-autobrief-podcast/scripts/bootstrap.sh
+bash ~/Code/02-ai-podcast-newsletter/.claude/skills/autobrief-podcast/scripts/bootstrap.sh
 ```
 
 It checks (and auto-fixes what's safe):
@@ -179,7 +179,7 @@ If `${DATE}/audio_output_elevenlabs/*/The AI News Podcast - Episode ${EPISODE} -
 2. Invoke the headless audio script (the `/podcast-audio` skill) — **always with the bootstrapped venv interpreter**, never the system `python3` and never the notebook:
 
    ```bash
-   ~/.claude/email-venv/bin/python ~/.claude/skills/podcast-audio/scripts/generate_audio.py ${DATE} --episode ${EPISODE}
+   ~/.claude/email-venv/bin/python ~/Code/02-ai-podcast-newsletter/.claude/skills/podcast-audio/scripts/generate_audio.py ${DATE} --episode ${EPISODE}
    ```
 
    (no mode arg = 6-segment test). Always pass `--episode ${EPISODE}` so the output filename matches the number postprocess/website will use. The script reads the ElevenLabs key from `${NEWSLETTER}/.env`.
@@ -187,12 +187,12 @@ If `${DATE}/audio_output_elevenlabs/*/The AI News Podcast - Episode ${EPISODE} -
    - On approval, run the full episode:
 
      ```bash
-     ~/.claude/email-venv/bin/python ~/.claude/skills/podcast-audio/scripts/generate_audio.py ${DATE} full --episode ${EPISODE}
+     ~/.claude/email-venv/bin/python ~/Code/02-ai-podcast-newsletter/.claude/skills/podcast-audio/scripts/generate_audio.py ${DATE} full --episode ${EPISODE}
      ```
    - On rejection: ask what's wrong, optionally regenerate specific segments:
 
      ```bash
-     ~/.claude/email-venv/bin/python ~/.claude/skills/podcast-audio/scripts/generate_audio.py ${DATE} regen N,M,O --episode ${EPISODE}
+     ~/.claude/email-venv/bin/python ~/Code/02-ai-podcast-newsletter/.claude/skills/podcast-audio/scripts/generate_audio.py ${DATE} regen N,M,O --episode ${EPISODE}
      ```
 4. Verify `${NEWSLETTER}/${DATE}/audio_output_elevenlabs/*/The AI News Podcast - Episode ${EPISODE} - * - Voice Only.mp3` exists post-run (the script writes exactly this name).
 5. Halt on failure.

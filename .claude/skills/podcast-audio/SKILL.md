@@ -37,15 +37,15 @@ The skill auto-detects the most recent `2026-MM-DD/` folder in `~/Code/02-ai-pod
 Run the script via Bash, **using the bootstrapped venv interpreter** (`~/.claude/email-venv/bin/python`) so `elevenlabs`/`pydub`/`httpx` are guaranteed present. Do **not** use the system `python3` — it won't have the deps and the run will fail (this is what previously forced the manual notebook fallback).
 
 ```bash
-~/.claude/email-venv/bin/python ~/.claude/skills/podcast-audio/scripts/generate_audio.py <args>
+~/.claude/email-venv/bin/python ~/Code/02-ai-podcast-newsletter/.claude/skills/podcast-audio/scripts/generate_audio.py <args>
 ```
 
-Pass through whatever positional args the user typed after `/podcast-audio`. For example, `/podcast-audio full` → `~/.claude/email-venv/bin/python ~/.claude/skills/podcast-audio/scripts/generate_audio.py full`.
+Pass through whatever positional args the user typed after `/podcast-audio`. For example, `/podcast-audio full` → `~/.claude/email-venv/bin/python ~/Code/02-ai-podcast-newsletter/.claude/skills/podcast-audio/scripts/generate_audio.py full`.
 
 If the user asks for a dry-run (cost estimate only, no API call), add `--dry-run`:
 
 ```bash
-~/.claude/email-venv/bin/python ~/.claude/skills/podcast-audio/scripts/generate_audio.py full --dry-run
+~/.claude/email-venv/bin/python ~/Code/02-ai-podcast-newsletter/.claude/skills/podcast-audio/scripts/generate_audio.py full --dry-run
 ```
 
 The script streams progress to stdout. Let it run to completion — a full episode takes 2–4 minutes depending on segment count and ElevenLabs response time.
@@ -57,7 +57,7 @@ The script streams progress to stdout. Let it run to completion — a full episo
 Setup is handled by the AutoBrief bootstrap — run it once (it's idempotent):
 
 ```bash
-bash ~/Code/00-autobrief-podcast/scripts/bootstrap.sh
+bash ~/Code/02-ai-podcast-newsletter/.claude/skills/autobrief-podcast/scripts/bootstrap.sh
 ```
 
 That creates the `~/.claude/email-venv` venv, installs `elevenlabs`/`pydub`/`httpx` (plus the rest of the pipeline's deps), checks for `ffmpeg`, and verifies the ElevenLabs API key is present.
@@ -116,7 +116,7 @@ The Jupyter notebook in the episode folder is still produced by `/ai-podcast` as
 
 | Situation | Response |
 |-----------|----------|
-| No API key found | Ensure `ELEVENLABS_API_KEY=...` is in `~/Code/02-ai-podcast-newsletter/.env`; re-run `bash ~/Code/00-autobrief-podcast/scripts/bootstrap.sh` to verify |
+| No API key found | Ensure `ELEVENLABS_API_KEY=...` is in `~/Code/02-ai-podcast-newsletter/.env`; re-run `bash ~/Code/02-ai-podcast-newsletter/.claude/skills/autobrief-podcast/scripts/bootstrap.sh` to verify |
 | Missing Python deps | Run the bootstrap, and invoke the script with `~/.claude/email-venv/bin/python` (not system `python3`) |
 | No episode folder for given date | List available `2026-*/` folders |
 | Multiple JSON files in folder | Ask user to disambiguate |

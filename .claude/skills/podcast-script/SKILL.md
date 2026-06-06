@@ -31,15 +31,18 @@ Also set:
 ```bash
 VENV=~/.claude/email-venv
 TODAY=$(date +%Y-%m-%d)
-# Prefer dev repo scripts; fall back to installed skill copy
-if [ -f ~/Code/01-ai-podcast-script/scripts/fetch_ai_emails.py ]; then
+PROJECT_DIR=~/Code/02-ai-podcast-newsletter   # override via email_config.json "podcast_dir"
+# Skills are vendored inside the newsletter repo; fall back to legacy locations.
+if [ -f "$PROJECT_DIR/.claude/skills/podcast-script/scripts/fetch_ai_emails.py" ]; then
+  SCRIPTS="$PROJECT_DIR/.claude/skills/podcast-script/scripts"
+  REFS="$PROJECT_DIR/.claude/skills/podcast-script/references"
+elif [ -f ~/Code/01-ai-podcast-script/scripts/fetch_ai_emails.py ]; then
   SCRIPTS=~/Code/01-ai-podcast-script/scripts
   REFS=~/Code/01-ai-podcast-script/references
 elif [ -f ~/.claude/skills/podcast-script/scripts/fetch_ai_emails.py ]; then
   SCRIPTS=~/.claude/skills/podcast-script/scripts
   REFS=~/.claude/skills/podcast-script/references
 fi
-PROJECT_DIR=~/Code/02-ai-podcast-newsletter   # override via email_config.json "podcast_dir"
 ```
 
 If `email_config.json` has a `podcast_dir` key, use that value instead of the default.
@@ -95,7 +98,7 @@ Say: "✓ Phase 1 complete — digest ready from newsletters. Launching web rese
 
 Read the agent instructions from:
 ```bash
-cat ~/.claude/skills/podcast-script/references/search_topics.md
+cat "$REFS/search_topics.md"
 ```
 
 Then launch **5 web search agents in parallel** using the Task tool (subagent_type: `general-purpose`). Each agent:
@@ -483,7 +486,7 @@ These go inside Host 1's text, not as separate segments.
 ~/.claude/email-venv/bin/python --version
 
 # Re-run email fetch (force refresh)
-~/.claude/email-venv/bin/python ~/.claude/skills/podcast-script/scripts/fetch_ai_emails.py \
+~/.claude/email-venv/bin/python ~/Code/02-ai-podcast-newsletter/.claude/skills/podcast-script/scripts/fetch_ai_emails.py \
   --hours 168 --account YOUR_ACCOUNT
 
 # View today's story list

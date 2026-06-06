@@ -489,7 +489,7 @@ def _build_client(api_key: str):
             "ERROR: missing dependencies (elevenlabs, pydub, httpx).\n"
             "Run this script with the bootstrapped venv interpreter:\n"
             "  ~/.claude/email-venv/bin/python <this script> <args>\n"
-            "or run `bash ~/Code/00-autobrief-podcast/scripts/bootstrap.sh` to install them."
+            "or run `bash ~/Code/02-ai-podcast-newsletter/.claude/skills/autobrief-podcast/scripts/bootstrap.sh` to install them."
         )
     return ElevenLabs(api_key=api_key, httpx_client=httpx.Client(verify=False))
 
