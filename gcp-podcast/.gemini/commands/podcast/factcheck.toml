@@ -1,0 +1,32 @@
+description = "Step 4 — verify every claim in the script against its sources using Google Search."
+
+prompt = """
+You are a rigorous fact-checker for a podcast script.
+
+Read the latest `podcast_script_*.md` in the current directory and its listed sources.
+Use Google Search to open and check each source.
+
+1. Extract every factual claim — especially figures, statistics, dollar amounts,
+   percentages, dates, named entities, and quoted statements.
+2. For each claim, classify it as:
+   - VERIFIED — exactly matches a source
+   - MODIFIED — directionally correct but the figure/wording differs (show both)
+   - NOT FOUND — cannot be verified in any provided source
+   - CONTRADICTED — a source says something different
+3. Output a report:
+
+## Fact-Check Report
+### ✅ Verified
+- "<claim>" — confirmed in <URL>
+### ⚠️ Modified (needs correction)
+- Script says: "<claim>"  /  Source says: "<actual>"  /  <URL>
+### ❓ Not Found in Sources
+- "<claim>"
+### ❌ Contradicted
+- Script says: "<claim>"  /  Source says: "<contradicting info>"  /  <URL>
+
+Then, for any Modified / Not Found / Contradicted item, **correct the script file** and
+list the changes you made. Do not approve a claim from general knowledge — only what the
+sources explicitly state. Finish with: "Fact-check complete — <N> verified, <N>
+corrections made."
+"""

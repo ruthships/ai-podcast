@@ -1,0 +1,20 @@
+description = "Step 6 — build the email newsletter HTML from the script and story list."
+
+prompt = """
+Build this week's email newsletter from the latest `podcast_script_*.md` and
+`podcast_stories_*.md` in the current directory. Episode focus / number if given: {{args}}
+
+Produce:
+1. A 2-3 sentence episode summary (the same plain, factual, exec voice as the script).
+2. 4-6 headline bullets — one per covered story, each with its primary-source link.
+3. A clean, email-safe HTML file (inline styles only, single column, max ~600px wide,
+   no external CSS or JavaScript — many email clients strip them). Include a clearly
+   marked placeholder `#EPISODE_URL` where the audio link will go.
+
+**Human gate:** before writing the file, show the user the summary + headlines and ask
+for approval. Only after they approve, save the HTML as
+`newsletter_episode-<N>-<TODAY>.html` and tell them where it is.
+
+If they'd rather not deal with HTML, offer to put the same content into a Google Doc or a
+Gmail draft instead. Then point them to /podcast:publish.
+"""

@@ -1,0 +1,37 @@
+description = "Step 1 — search the web for the last 7 days of AI news and rank stories for an exec podcast."
+
+prompt = """
+You are preparing this week's AI-news briefing for senior executives.
+Optional focus from the user: {{args}}
+
+Use Google Search. Find significant AI news from the **last 7 days** across these areas:
+- OpenAI (models, products, policy, personnel)
+- Google DeepMind and Anthropic
+- Meta, xAI, and other model labs
+- AI regulation & policy
+- Enterprise AI adoption and economic impact
+
+Then merge, de-duplicate (combine the same story from multiple outlets, keep all
+sources), and rank into the three tiers defined in GEMINI.md.
+
+Output exactly this format and save it as `podcast_stories_<TODAY>.md`:
+
+# AI Podcast Story List — <TODAY>
+_<N> stories | sources: web research with Google Search grounding_
+
+## Tier 1 — Must-Cover
+### 1. <Story title>
+- **Summary**: <2-3 factual sentences>
+- **Exec angle**: <why it matters strategically / competitively>
+- **Sources**: <primary URL> (<date>), <other URL>
+
+## Tier 2 — Strong Interest
+<same format, continue numbering>
+
+## Tier 3 — Worth Knowing
+<same format, continue numbering>
+
+Number stories sequentially across all tiers (1, 2, 3 …). Plain language, no hype.
+When done, show the full list and ask the user which stories to cover (numbers or
+ranges). Typically 4-6 stories make a good 20-30 minute episode.
+"""

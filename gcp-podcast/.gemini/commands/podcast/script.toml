@@ -1,0 +1,60 @@
+description = "Step 3 — turn the picked stories into a two-host podcast script following the style rules."
+
+prompt = """
+Write the full two-host podcast script for the stories the user picked: {{args}}
+
+Use the story list in the current directory (`podcast_stories_*.md`) as your source
+material. Save the result as `podcast_script_<TODAY>.md`.
+
+STYLE RULES — follow precisely:
+- Source-bound: every claim, figure, statistic, and named entity must come from the
+  source material. Do not extrapolate or fill gaps with general knowledge.
+- Factual only. No recommendations or opinions. Never "executives should…".
+- Turn structure: Host 1 speaks in 2-3 sentence blocks carrying the facts; Host 2 in
+  1-2 sentence turns. Roughly 75% Host 1 / 25% Host 2.
+- Every Host 2 turn is at least 20 words (text-to-speech needs the length to sound
+  natural). Mix ~50% questions, ~40% statements, ~10% exclamations — never all questions.
+- Host 1 briefly acknowledges Host 2 at the start of each reply ("Right —", "Exactly —").
+- Host 2 reactions limited to: "Right." "Yeah." "Exactly." "I mean" "Oh wow." (use
+  "Oh wow" once only, on the single most surprising fact).
+- Add natural fillers to Host 2 ("I mean,", "Wait —", "So,") so it doesn't sound read.
+- No colons before numbers (write "at a $350 billion valuation", not "Valuation: $350
+  billion") — TTS pauses unnaturally on colons.
+- No mid-sentence question marks; use an em-dash instead ("Wait — both of them, at the
+  same time?").
+- Open with the week's overall theme, not a list of topics. Don't lead with sensitive
+  content; frame around the broader implication.
+- Between stories use a thematic bridge, never "Next up" or "Moving on".
+- Conclusions are declarative, not hedged ("The era of X is narrowing.").
+- No host introductions by name.
+
+Format:
+
+# AI Weekly Podcast — <TODAY>
+_Topics: <selected titles>_
+_Runtime estimate: ~<N> minutes_
+
+## INTRO
+**HOST 1:** Welcome to the AI podcast. It's <Month DD, YYYY>, and this week <1-2 sentences
+framing the week's theme>.
+**HOST 2:** <short affirming reaction + one line on stakes>
+**HOST 1:** Let's get into it.
+
+## STORY 1: <title>
+**HOST 1:** <what happened, 2-3 factual sentences>
+**HOST 2:** <short mid-explanation question or reaction>
+**HOST 1:** <continue — analogy if technical; implications as facts>
+**HOST 2:** <brief clarifying question or echo>
+**HOST 1:** <declarative conclusion + thematic bridge to next story>
+
+<repeat per story; vary who drives; Host 2 never dominates>
+
+## CLOSING
+**HOST 1:** <one-sentence thematic synthesis across the episode — no recap>
+**HOST 2:** <one short closing observation>
+**HOST 1:** Thanks for listening. See you next week.
+
+_Sources: <all URLs used>_
+
+After saving, tell the user the file is ready and remind them to run /podcast:factcheck.
+"""

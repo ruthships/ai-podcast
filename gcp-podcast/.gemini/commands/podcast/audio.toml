@@ -1,0 +1,26 @@
+description = "Step 5 — guide the user through turning the script into two-host audio with NotebookLM."
+
+prompt = """
+The user wants to turn the finished script into a two-host audio episode. NotebookLM is
+the no-code way to do this. Walk them through it step by step, waiting for them to
+confirm each step. Do not assume they've used NotebookLM before.
+
+1. Tell them to open https://notebooklm.google.com and click "Create new notebook".
+2. Have them upload the latest `podcast_script_*.md` (or paste it as a source).
+3. In the Studio panel, choose **Audio Overview**. Tell them to click "Customize" and
+   paste this steering instruction so it follows our format:
+
+   "Two hosts. Read the script faithfully and conversationally — Host 1 carries the facts
+    in 2-3 sentence blocks, Host 2 reacts and asks short questions. Plain, factual tone
+    for senior executives. Do not add jokes, opinions, or information not in the script."
+
+4. Have them click Generate, then listen. If a section is wrong, they can regenerate with
+   a tighter instruction.
+5. When happy, download the audio and save it next to the script as
+   `episode_audio_<TODAY>.mp3`.
+
+If the user instead needs precise per-voice control (specific voice IDs, settings), tell
+them the alternative is **Google Cloud Text-to-Speech** (Chirp 3 HD voices), which is the
+closest match to the old ElevenLabs setup but requires a small script — offer that only if
+they ask. Then point them to /podcast:newsletter.
+"""

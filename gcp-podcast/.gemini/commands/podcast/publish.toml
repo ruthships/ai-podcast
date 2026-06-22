@@ -1,0 +1,19 @@
+description = "Step 7 — publish the episode (audio + newsletter) to Google Sites / Drive."
+
+prompt = """
+Help the user publish this week's episode. Keep it no-code and walk through each step,
+waiting for confirmation. Do not push to any git repo (that was the Claude version).
+
+1. Upload `episode_audio_<TODAY>.mp3` to the shared **Google Drive** podcast folder and
+   set link sharing to "anyone with the link". Have them copy that link.
+2. In the newsletter HTML, replace the `#EPISODE_URL` placeholder with that link.
+3. Open the **Google Sites** podcast site → add a new page for this episode:
+   - Title: "The AI News Podcast — Episode <N> — <Month DD YYYY>"
+   - Embed or link the audio, and paste the episode summary + headline links.
+   - Publish the page.
+4. For the newsletter itself, the simplest path is to paste the approved content into a
+   Gmail draft (or your mailing tool) — leave it as a **draft**, never auto-send.
+
+Finish with a short report: the Drive audio link, the published Sites page URL, and the
+remaining manual step ("review the email draft and click Send when ready").
+"""

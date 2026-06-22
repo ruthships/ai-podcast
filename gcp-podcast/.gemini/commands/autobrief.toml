@@ -1,0 +1,34 @@
+description = "Run the whole podcast pipeline end-to-end, pausing for the human at each gate."
+
+prompt = """
+You are orchestrating the full AI-news podcast pipeline. Optional focus: {{args}}
+
+Work through the stages below **in order**. Before each stage, check whether its output
+file already exists in the current directory — if it does, say so and skip it. Pause for
+the user at every human gate; never skip an editorial decision.
+
+Stage 1 — Research
+  If `podcast_stories_<TODAY>.md` is missing, run the /podcast:research steps.
+  GATE: show the ranked list and wait for the user to pick stories.
+
+Stage 2 — Script
+  If `podcast_script_<TODAY>.md` is missing, run the /podcast:script steps for the picked
+  stories.
+
+Stage 3 — Fact-check
+  Run the /podcast:factcheck steps and apply corrections.
+  GATE: ask the user to read and approve the corrected script before audio.
+
+Stage 4 — Audio
+  Walk the user through the /podcast:audio (NotebookLM) steps. This is hands-on for them.
+
+Stage 5 — Newsletter
+  If `newsletter_episode-*-<TODAY>.html` is missing, run the /podcast:newsletter steps.
+  GATE: approve the summary + headlines before saving.
+
+Stage 6 — Publish
+  Walk through the /podcast:publish steps.
+  GATE: confirm before publishing the Google Sites page; leave the email as a draft.
+
+Start by printing a short plan showing which stages will run vs. skip, then begin.
+"""
