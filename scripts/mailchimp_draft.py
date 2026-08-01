@@ -138,7 +138,16 @@ def resolve_newsletter(episode: int | None, html_arg: str | None) -> tuple[Path,
 
 
 def hero_alt(html: str) -> str | None:
-    """Subject line default = the hero image's alt text (the editorial theme)."""
+    """Subject line default = the editorial theme.
+
+    Prefers the <!-- EPISODE_THEME: ... --> marker (added so the hero image's
+    alt text could become a plain accessibility description instead of
+    doubling as the theme — see /podcast-email Step 7). Falls back to the
+    hero alt text for older newsletters that predate the marker.
+    """
+    m = re.search(r"<!--\s*EPISODE_THEME:\s*(.+?)\s*-->", html)
+    if m:
+        return m.group(1).strip()
     m = re.search(r'<img[^>]*_hero\.jpg[^>]*\balt="([^"]*)"', html, re.IGNORECASE)
     if m:
         return m.group(1).strip()
