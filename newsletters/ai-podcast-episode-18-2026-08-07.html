@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--[if mso]>
+<xml><w:WordDocument xmlns:w="urn:schemas-microsoft-com:office:word"><w:DontUseAdvancedTypographyReadingMail/></w:WordDocument>
+<o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml>
+<![endif]--><!--[if !mso]><!-->
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;0,700;1,700&amp;display=swap" rel="stylesheet" type="text/css"><!--<![endif]-->
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		a[x-apple-data-detectors] {
+			color: inherit !important;
+			text-decoration: inherit !important;
+		}
+
+		#MessageViewBody a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		p {
+			line-height: inherit
+		}
+
+		.desktop_hide,
+		.desktop_hide table {
+			mso-hide: all;
+			display: none;
+			max-height: 0px;
+			overflow: hidden;
+		}
+
+		.image_block img+div {
+			display: none;
+		}
+
+		sup,
+		sub {
+			font-size: 75%;
+			line-height: 0;
+		}
+
+		@media (max-width:620px) {
+			.image_block div.fullWidth {
+				max-width: 100% !important;
+			}
+
+			.mobile_hide {
+				display: none;
+			}
+
+			.row-content {
+				width: 100% !important;
+			}
+
+			.stack .column {
+				width: 100%;
+				display: block;
+			}
+
+			.mobile_hide {
+				min-height: 0;
+				max-height: 0;
+				max-width: 0;
+				overflow: hidden;
+				font-size: 0px;
+			}
+
+			.desktop_hide,
+			.desktop_hide table {
+				display: table !important;
+				max-height: none !important;
+			}
+
+			.reverse {
+				display: table;
+				width: 100%;
+			}
+
+			.reverse .column.first {
+				display: table-footer-group !important;
+			}
+
+			.reverse .column.last {
+				display: table-header-group !important;
+			}
+
+			.row-3 .column-1 .block-2.heading_block h1 {
+				font-size: 32px !important;
+			}
+
+			.row-11 .column-1 .block-1.spacer_block,
+			.row-12 .column-1 .block-1.spacer_block,
+			.row-4 .column-1 .block-1.spacer_block {
+				height: 40px !important;
+			}
+
+			.row-3 .column-1 .block-3.paragraph_block td.pad>div {
+				font-size: 16px !important;
+			}
+
+			.row-5 .column-2 .block-2.paragraph_block td.pad>div,
+			.row-6 .column-1 .block-2.paragraph_block td.pad>div,
+			.row-7 .column-2 .block-2.paragraph_block td.pad>div,
+			.row-8 .column-1 .block-2.paragraph_block td.pad>div,
+			.row-9 .column-2 .block-2.paragraph_block td.pad>div,
+			.row-10 .column-1 .block-2.paragraph_block td.pad>div {
+				text-align: center !important;
+				font-size: 14px !important;
+			}
+
+			.row-5 .column-2 .block-2.paragraph_block td.pad,
+			.row-6 .column-1 .block-2.paragraph_block td.pad,
+			.row-7 .column-2 .block-2.paragraph_block td.pad,
+			.row-8 .column-1 .block-2.paragraph_block td.pad,
+			.row-9 .column-2 .block-2.paragraph_block td.pad,
+			.row-10 .column-1 .block-2.paragraph_block td.pad {
+				padding: 20px 0 !important;
+			}
+
+			.row-5 .column-2 .block-1.heading_block h3,
+			.row-6 .column-1 .block-1.heading_block h3,
+			.row-7 .column-2 .block-1.heading_block h3,
+			.row-8 .column-1 .block-1.heading_block h3,
+			.row-9 .column-2 .block-1.heading_block h3,
+			.row-10 .column-1 .block-1.heading_block h3 {
+				text-align: center !important;
+			}
+
+			.row-5 .column-2 .block-1.heading_block td.pad,
+			.row-6 .column-1 .block-1.heading_block td.pad,
+			.row-7 .column-2 .block-1.heading_block td.pad,
+			.row-8 .column-1 .block-1.heading_block td.pad,
+			.row-9 .column-2 .block-1.heading_block td.pad,
+			.row-10 .column-1 .block-1.heading_block td.pad {
+				padding: 0 !important;
+			}
+
+			.row-1 .column-1 .col-pad {
+				padding: 25px 0 !important;
+			}
+
+			.row-3 .column-1 .col-pad {
+				padding: 48px 20px !important;
+			}
+
+			.row-5 .column-1,
+			.row-6 .column-2,
+			.row-7 .column-1,
+			.row-8 .column-2,
+			.row-9 .column-1,
+			.row-10 .column-2 {
+				padding: 0 0 30px !important;
+			}
+
+			.row-5 .column-2 .col-pad,
+			.row-6 .column-1 .col-pad,
+			.row-7 .column-2 .col-pad,
+			.row-8 .column-1 .col-pad,
+			.row-9 .column-2 .col-pad,
+			.row-10 .column-1 .col-pad {
+				padding: 0 20px 48px !important;
+			}
+		}
+	</style><!--[if mso ]><style>sup, sub { font-size: 100% !important; } sup { mso-text-raise:10% } sub { mso-text-raise:-10% }</style> <![endif]-->
+</head>
+
+<body class="body" style="margin: 0; background-color: #ffffff; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
+	<!-- EPISODE_THEME: Who Controls the Infrastructure -->
+	<table class="nl-container" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff;">
+		<tbody>
+			<tr>
+				<td>
+					<!-- ROW 1: Header logo -->
+					<table class="row row-1" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="col-pad" style="padding-bottom:25px;padding-top:25px;">
+																<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																	<tr>
+																		<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+																			<div class="alignment" align="center">
+																				<div class="fullWidth" style="max-width: 600px;"><img src="https://mcusercontent.com/af80ba3d9225959b5306dfe78/images/3810d858-c5c7-3510-bbba-b699a8a46280.jpg" style="display: block; height: auto; border: 0; width: 100%;" width="600" alt="Logo" title="Logo" height="auto"></div>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- ROW 2: Hero image -->
+					<table class="row row-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+																<div class="alignment" align="center">
+																	<div class="fullWidth" style="max-width: 600px;"><img src="https://raw.githubusercontent.com/ruthships/ai-podcast/main/assets/ep18_hero.jpg" style="display: block; height: auto; border: 0; width: 100%;" width="600" alt="Close-up of a green computer circuit board with solder points" title="Close-up of a green computer circuit board with solder points" height="auto"></div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- ROW 3: Episode number, date, summary, listen button -->
+					<table class="row row-3" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="col-pad" style="padding-bottom:48px;padding-left:12px;padding-right:13px;padding-top:48px;">
+																<table class="heading_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																	<tr>
+																		<td class="pad" style="padding-bottom:20px;text-align:center;width:100%;">
+																			<h3 style="margin: 0; color: #191f33; direction: ltr; font-family: 'IBM Plex Mono','Georgia'; font-size: 14px; font-weight: 600; letter-spacing: 2px; line-height: 1.2; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 17px;"><span class="tinyMce-placeholder" style="word-break: break-word;">PODCAST #18</span></h3>
+																		</td>
+																	</tr>
+																</table>
+																<table class="heading_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																	<tr>
+																		<td class="pad" style="text-align:center;width:100%;">
+																			<h1 style="margin: 0; color: #18171c; direction: ltr; font-family: Space Grotesk, Georgia; font-size: 48px; font-weight: 700; letter-spacing: normal; line-height: 1.2; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 58px;">August 7, 2026</h1>
+																		</td>
+																	</tr>
+																</table>
+																<table class="paragraph_block block-3" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																	<tr>
+																		<td class="pad" style="padding-top:20px;">
+																			<div style="color:#18171c;direction:ltr;font-family:'IBM Plex Mono','Georgia';font-size:18px;font-weight:400;letter-spacing:0px;line-height:1.5;text-align:center;mso-line-height-alt:27px;">
+																				<p style="margin: 0;">This week wasn&rsquo;t about a flashy new model &mdash; it was about who controls the infrastructure underneath the models. Google DeepMind saw its most dramatic leadership shakeup ever, with Demis Hassabis stepping back and Gemini&rsquo;s core technical team walking out the same day to launch a rival startup. Alibaba stepped into the gap with a frontier-level model priced a fraction of what Western labs charge, and OpenAI answered with steep price cuts of its own. Meanwhile Anthropic is building an in-house chip team even as it locks in a $15 billion compute deal &mdash; a hedge against depending on any single vendor. A landmark $567 million ruling against Meta raised the stakes on algorithmic liability, and Shopify closed the week with proof that AI search can grow a business rather than cannibalize it.</p>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+													<table class="button_block block-4" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="pad" style="padding-top:24px;text-align:center;">
+																<div class="alignment" align="center">
+																	<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://drive.google.com/file/d/16YUMJKmUbBnBua8ZQTCNFjoRpmdVkZ7O/view?usp=sharing" style="height:44px;width:200px;v-text-anchor:middle;" arcsize="8%" stroke="false" fillcolor="#18171c"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center dir="false" style="color:#ffffff;font-family:Georgia, serif;font-size:13px;font-weight:600;letter-spacing:1px;">&#9654; LISTEN TO EPISODE</center></v:textbox></v:roundrect><![endif]-->
+																	<!--[if !mso]><!-->
+																	<a href="https://drive.google.com/file/d/16YUMJKmUbBnBua8ZQTCNFjoRpmdVkZ7O/view?usp=sharing" target="_blank" style="background-color:#18171c;border-radius:4px;color:#ffffff;display:inline-block;font-family:'IBM Plex Mono','Georgia';font-size:13px;font-weight:600;letter-spacing:1px;mso-border-alt:none;padding:12px 28px;text-decoration:none;text-transform:uppercase;">&#9654;&nbsp; Listen to Episode</a>
+																	<!--<![endif]-->
+																</div>
+															</td>
+														</tr>
+													</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- ROW 4: Spacer -->
+					<table class="row row-4" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<div class="spacer_block block-1" style="height:24px;line-height:24px;font-size:1px;">&#8202;</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- HEADLINE 1 (ODD - image left, text right) -->
+					<table class="row row-5" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody><tr><td>
+							<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+								<tbody><tr>
+									<td class="column column-1" width="50%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: middle;">
+										<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr><td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+												<div class="alignment" align="center">
+													<div class="fullWidth" style="max-width: 300px;"><img src="https://raw.githubusercontent.com/ruthships/ai-podcast/main/assets/ep18_1_deepmind-shakeup.jpg" style="display: block; height: auto; border: 0; width: 100%;" width="300" alt="Low-angle view of a modern glass corporate office building" title="Low-angle view of a modern glass corporate office building" height="auto"></div>
+												</div>
+											</td></tr>
+										</table>
+									</td>
+									<td class="column column-2" width="50%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: middle;">
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr><td class="col-pad" style="padding-bottom:24px;padding-left:32px;padding-right:0px;padding-top:24px;">
+												<div style="width:305px;max-width:305px;margin-left:0;margin-right:0;">
+												<table class="heading_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+													<tr><td class="pad" style="padding-bottom:20px;text-align:center;width:100%;">
+														<h3 style="margin: 0; color: #18171c; direction: ltr; font-family: 'Space Grotesk','Georgia'; font-size: 20px; font-weight: 600; letter-spacing: normal; line-height: 1.2; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 24px;">Google DeepMind&rsquo;s Leadership Shakeup</h3>
+													</td></tr>
+												</table>
+												<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+													<tr><td class="pad" style="padding-bottom:20px;">
+														<div style="color:#18171c;direction:ltr;font-family:'IBM Plex Mono','Georgia';font-size:14px;font-weight:400;letter-spacing:0px;line-height:1.5;text-align:left;mso-line-height-alt:21px;">
+															<p style="margin: 0;">Demis Hassabis stepped back as CEO to become chairman and Alphabet&rsquo;s chief scientist, handing daily operations to CTO Koray Kavukcuoglu. The same day, Gemini co-leads Jeff Dean and Oriol Vinyals left after decades to launch a rival startup, Discovery Loop.</p>
+														</div>
+													</td></tr>
+												</table>
+												</div>
+											</td></tr>
+										</table>
+									</td>
+								</tr></tbody>
+							</table>
+						</td></tr></tbody>
+					</table>
+
+					<!-- HEADLINE 2 (EVEN - text left, image right) -->
+					<table class="row row-6" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody><tr><td>
+							<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+								<tbody><tr class="reverse">
+									<td class="column column-1 first" width="50%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: middle;">
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr><td class="col-pad" style="padding-bottom:24px;padding-left:0px;padding-right:32px;padding-top:24px;">
+												<div style="width:305px;max-width:305px;margin-left:-37px;margin-right:0;">
+												<table class="heading_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+													<tr><td class="pad" style="padding-bottom:20px;text-align:center;width:100%;">
+														<h3 style="margin: 0; color: #18171c; direction: ltr; font-family: 'Space Grotesk','Georgia'; font-size: 20px; font-weight: 600; letter-spacing: normal; line-height: 1.2; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 24px;">Alibaba&rsquo;s Qwen3.8-Max</h3>
+													</td></tr>
+												</table>
+												<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+													<tr><td class="pad" style="padding-bottom:20px;">
+														<div style="color:#18171c;direction:ltr;font-family:'IBM Plex Mono','Georgia';font-size:14px;font-weight:400;letter-spacing:0px;line-height:1.5;text-align:left;mso-line-height-alt:21px;">
+															<p style="margin: 0;">Alibaba unveiled Qwen3.8-Max, a 2.4-trillion-parameter model with a one-million-token context window, priced at just $2 and $6 per million tokens &mdash; matching or beating Claude Opus on several benchmarks, with open weights coming soon.</p>
+														</div>
+													</td></tr>
+												</table>
+												</div>
+											</td></tr>
+										</table>
+									</td>
+									<td class="column column-2 last" width="50%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: middle;">
+										<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr><td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+												<div class="alignment" align="center">
+													<div class="fullWidth" style="max-width: 300px;"><img src="https://raw.githubusercontent.com/ruthships/ai-podcast/main/assets/ep18_2_alibaba-qwen.jpg" style="display: block; height: auto; border: 0; width: 100%;" width="300" alt="Racks of network servers in a data center hallway" title="Racks of network servers in a data center hallway" height="auto"></div>
+												</div>
+											</td></tr>
+										</table>
+									</td>
+								</tr></tbody>
+							</table>
+						</td></tr></tbody>
+					</table>
+
+					<!-- HEADLINE 3 (ODD - image left, text right) -->
+					<table class="row row-7" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody><tr><td>
+							<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+								<tbody><tr>
+									<td class="column column-1" width="50%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: middle;">
+										<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr><td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+												<div class="alignment" align="center">
+													<div class="fullWidth" style="max-width: 300px;"><img src="https://raw.githubusercontent.com/ruthships/ai-podcast/main/assets/ep18_3_chatgpt-price-cuts.jpg" style="display: block; height: auto; border: 0; width: 100%;" width="300" alt="Close-up of a laptop keyboard" title="Close-up of a laptop keyboard" height="auto"></div>
+												</div>
+											</td></tr>
+										</table>
+									</td>
+									<td class="column column-2" width="50%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: middle;">
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr><td class="col-pad" style="padding-bottom:24px;padding-left:32px;padding-right:0px;padding-top:24px;">
+												<div style="width:305px;max-width:305px;margin-left:0;margin-right:0;">
+												<table class="heading_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+													<tr><td class="pad" style="padding-bottom:20px;text-align:center;width:100%;">
+														<h3 style="margin: 0; color: #18171c; direction: ltr; font-family: 'Space Grotesk','Georgia'; font-size: 20px; font-weight: 600; letter-spacing: normal; line-height: 1.2; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 24px;">ChatGPT&rsquo;s Price Cuts</h3>
+													</td></tr>
+												</table>
+												<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+													<tr><td class="pad" style="padding-bottom:20px;">
+														<div style="color:#18171c;direction:ltr;font-family:'IBM Plex Mono','Georgia';font-size:14px;font-weight:400;letter-spacing:0px;line-height:1.5;text-align:left;mso-line-height-alt:21px;">
+															<p style="margin: 0;">OpenAI rolled out GPT-5.6 Sol for paying users and made GPT-5.6 Luna the free default with unlimited chats, while cutting Luna&rsquo;s API pricing 80% and Terra&rsquo;s by 20% &mdash; a direct response to cheaper competition.</p>
+														</div>
+													</td></tr>
+												</table>
+												</div>
+											</td></tr>
+										</table>
+									</td>
+								</tr></tbody>
+							</table>
+						</td></tr></tbody>
+					</table>
+
+					<!-- HEADLINE 4 (EVEN - text left, image right) -->
+					<table class="row row-8" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody><tr><td>
+							<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+								<tbody><tr class="reverse">
+									<td class="column column-1 first" width="50%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: middle;">
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr><td class="col-pad" style="padding-bottom:24px;padding-left:0px;padding-right:32px;padding-top:24px;">
+												<div style="width:305px;max-width:305px;margin-left:-37px;margin-right:0;">
+												<table class="heading_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+													<tr><td class="pad" style="padding-bottom:20px;text-align:center;width:100%;">
+														<h3 style="margin: 0; color: #18171c; direction: ltr; font-family: 'Space Grotesk','Georgia'; font-size: 20px; font-weight: 600; letter-spacing: normal; line-height: 1.2; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 24px;">Anthropic&rsquo;s Custom Chip Team</h3>
+													</td></tr>
+												</table>
+												<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+													<tr><td class="pad" style="padding-bottom:20px;">
+														<div style="color:#18171c;direction:ltr;font-family:'IBM Plex Mono','Georgia';font-size:14px;font-weight:400;letter-spacing:0px;line-height:1.5;text-align:left;mso-line-height-alt:21px;">
+															<p style="margin: 0;">Anthropic confirmed it&rsquo;s building an internal custom-silicon team to design chips and models together, while also signing a $15 billion data center deal in Texas to deploy Google and Broadcom-built TPUs.</p>
+														</div>
+													</td></tr>
+												</table>
+												</div>
+											</td></tr>
+										</table>
+									</td>
+									<td class="column column-2 last" width="50%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: middle;">
+										<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr><td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+												<div class="alignment" align="center">
+													<div class="fullWidth" style="max-width: 300px;"><img src="https://raw.githubusercontent.com/ruthships/ai-podcast/main/assets/ep18_4_anthropic-chip.jpg" style="display: block; height: auto; border: 0; width: 100%;" width="300" alt="Macro photograph of a colorful integrated circuit chip die" title="Macro photograph of a colorful integrated circuit chip die" height="auto"></div>
+													<div style="max-width: 300px; text-align: center; padding-top: 4px;"><span style="color:#9a9a9a;font-family:'IBM Plex Mono','Georgia';font-size:10px;">Image: ZeptoBars, CC BY 3.0</span></div>
+												</div>
+											</td></tr>
+										</table>
+									</td>
+								</tr></tbody>
+							</table>
+						</td></tr></tbody>
+					</table>
+
+					<!-- HEADLINE 5 (ODD - image left, text right) -->
+					<table class="row row-9" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody><tr><td>
+							<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+								<tbody><tr>
+									<td class="column column-1" width="50%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: middle;">
+										<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr><td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+												<div class="alignment" align="center">
+													<div class="fullWidth" style="max-width: 300px;"><img src="https://raw.githubusercontent.com/ruthships/ai-podcast/main/assets/ep18_5_meta-ruling.jpg" style="display: block; height: auto; border: 0; width: 100%;" width="300" alt="A wooden judge&#39;s gavel resting on a sound block" title="A wooden judge's gavel resting on a sound block" height="auto"></div>
+												</div>
+											</td></tr>
+										</table>
+									</td>
+									<td class="column column-2" width="50%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: middle;">
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr><td class="col-pad" style="padding-bottom:24px;padding-left:32px;padding-right:0px;padding-top:24px;">
+												<div style="width:305px;max-width:305px;margin-left:0;margin-right:0;">
+												<table class="heading_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+													<tr><td class="pad" style="padding-bottom:20px;text-align:center;width:100%;">
+														<h3 style="margin: 0; color: #18171c; direction: ltr; font-family: 'Space Grotesk','Georgia'; font-size: 20px; font-weight: 600; letter-spacing: normal; line-height: 1.2; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 24px;">Meta&rsquo;s $567 Million Ruling</h3>
+													</td></tr>
+												</table>
+												<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+													<tr><td class="pad" style="padding-bottom:20px;">
+														<div style="color:#18171c;direction:ltr;font-family:'IBM Plex Mono','Georgia';font-size:14px;font-weight:400;letter-spacing:0px;line-height:1.5;text-align:left;mso-line-height-alt:21px;">
+															<p style="margin: 0;">A New Mexico court ordered Meta to pay $567 million in damages after a trial found its platforms contributed to mental health harms among children and teenagers &mdash; a real legal precedent for algorithmic accountability.</p>
+														</div>
+													</td></tr>
+												</table>
+												</div>
+											</td></tr>
+										</table>
+									</td>
+								</tr></tbody>
+							</table>
+						</td></tr></tbody>
+					</table>
+
+					<!-- HEADLINE 6 (EVEN - text left, image right) -->
+					<table class="row row-10" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody><tr><td>
+							<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+								<tbody><tr class="reverse">
+									<td class="column column-1 first" width="50%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: middle;">
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr><td class="col-pad" style="padding-bottom:24px;padding-left:0px;padding-right:32px;padding-top:24px;">
+												<div style="width:305px;max-width:305px;margin-left:-37px;margin-right:0;">
+												<table class="heading_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+													<tr><td class="pad" style="padding-bottom:20px;text-align:center;width:100%;">
+														<h3 style="margin: 0; color: #18171c; direction: ltr; font-family: 'Space Grotesk','Georgia'; font-size: 20px; font-weight: 600; letter-spacing: normal; line-height: 1.2; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 24px;">Shopify&rsquo;s AI Search Payoff</h3>
+													</td></tr>
+												</table>
+												<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+													<tr><td class="pad" style="padding-bottom:20px;">
+														<div style="color:#18171c;direction:ltr;font-family:'IBM Plex Mono','Georgia';font-size:14px;font-weight:400;letter-spacing:0px;line-height:1.5;text-align:left;mso-line-height-alt:21px;">
+															<p style="margin: 0;">Shopify reported that AI-driven traffic and orders to its merchant storefronts tripled year over year, with executives describing AI search as a complement to traditional search rather than a replacement.</p>
+														</div>
+													</td></tr>
+												</table>
+												</div>
+											</td></tr>
+										</table>
+									</td>
+									<td class="column column-2 last" width="50%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: middle;">
+										<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr><td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+												<div class="alignment" align="center">
+													<div class="fullWidth" style="max-width: 300px;"><img src="https://raw.githubusercontent.com/ruthships/ai-podcast/main/assets/ep18_6_shopify-ai.jpg" style="display: block; height: auto; border: 0; width: 100%;" width="300" alt="A drone carrying a delivery package through the air" title="A drone carrying a delivery package through the air" height="auto"></div>
+												</div>
+											</td></tr>
+										</table>
+									</td>
+								</tr></tbody>
+							</table>
+						</td></tr></tbody>
+					</table>
+					<!-- ROW 11: Spacer -->
+					<table class="row row-11" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<div class="spacer_block block-1" style="height:24px;line-height:24px;font-size:1px;">&#8202;</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- ROW 12: Spacer -->
+					<table class="row row-12" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<div class="spacer_block block-1" style="height:24px;line-height:24px;font-size:1px;">&#8202;</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table><!-- End -->
+</body>
+
+</html>
